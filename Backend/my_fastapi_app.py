@@ -1,7 +1,6 @@
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
-from datetime import datetime,timedelta
 import re
 import json
 
@@ -11,7 +10,7 @@ with open('config.json') as config_file:
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["*"],  # This allows all origins, you can specify your frontend URL instead
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
