@@ -78,29 +78,3 @@ function App() {
 }
 
 export default App;
-
-  /*un comment for OG bruhhhhh!
-  return (
-    <div className="App">
-      <h1>Access Logs</h1>
-      <div className="table-container">
-        <table>
-          <thead>
-            <tr>
-              <th>IPaddress</th>
-              <th>DateandTime</th>
-            </tr>
-          </thead>
-          <tbody>
-            {data.map((item, index) => (
-              <tr key={index}>
-                <td>{item.ip_address}</td>
-                <td>{item.date_time}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </div>
-  );
-}*/
