@@ -24,7 +24,7 @@ function App() {
   const startFetching = () => {
     if (!intervalId) {
       fetchData();
-      const id = setInterval(fetchData, 5000); // fetch every 5 seconds
+      const id = setInterval(fetchData, 5000);
       setIntervalId(id);
     }
   };
