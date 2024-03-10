@@ -42,20 +42,18 @@ def get_access_logs():
 
         result = []
         for log in access_logs:
-            # Extract IP address, date, and time from log entries
+            # Extracting IP address, date, and time from log entries
             ip_address = re.search(r'^([\d.]+)', log)
-            date_time = re.search(r'\[([^:]+):([^\]]+)\s[+\-\d]+\]', log)  # Updated regex
+            date_time = re.search(r'\[([^:]+):([^\]]+)\s[+\-\d]+\]', log) 
 
             if ip_address and date_time:
                 date = date_time.group(1)
                 time = date_time.group(2)
 
-                # Add 05:30 to the time
                 time_obj = datetime.strptime(time, '%H:%M:%S')
                 time_obj += timedelta(hours=5, minutes=30)
                 time = time_obj.strftime('%H:%M:%S')
 
-                # Update date format
                 day, month, year = date.split('/')
                 month = MONTH_MAP[month]
                 updated_date = f"{day}/{month}/{year}"
@@ -67,7 +65,6 @@ def get_access_logs():
                 })
 
         return JSONResponse(content=result)
-
-
+    
     except FileNotFoundError:
         return JSONResponse(content={"error": "Access log file not found"}, status_code=404)    
