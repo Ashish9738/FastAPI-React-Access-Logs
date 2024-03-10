@@ -1,4 +1,1 @@
-A Simple UI
--Designed for: Displaying access logs.
--Powered by: React and FastAPI.
--Enhanced with: API benchmarking for speed.
+A Simple UI for designed for displaying access logs which is Powered by React and FastAPI and Enhanced with API benchmarking for speed.
