@@ -42,7 +42,7 @@ def get_access_logs():
 
         result = []
         for log in access_logs:
-            # Extracting IP address, date, and time from log entries
+            
             ip_address = re.search(r'^([\d.]+)', log)
             date_time = re.search(r'\[([^:]+):([^\]]+)\s[+\-\d]+\]', log) 
 
